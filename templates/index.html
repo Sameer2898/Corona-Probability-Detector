@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title%} COVID-19 Tester {% endblock %}
+{% block homeactive %} active {% endblock homeactive %}
+{% block body %}
+<h4 class="text-center mt-3"> Corona Virus Probability Detector </h4>
+<form action="/" method="POST">
+  <div class="form-group">
+    <label for="fever">Enter Fever</label>
+    <input type="text" class="form-control" id="fever" name="fever" placeholder="Enter Fever Value">
+  </div>
+  <div class="form-group">
+    <label for="age">Enter Age</label>
+    <input type="text" class="form-control" id="age" name="age" placeholder="Enter Patients Age">
+  </div>
+  
+  </div>
+  <div class="form-group">
+    <label for="pain">Body Pain</label>
+    <select class="form-control custom-select" id="pain" name="pain">
+      <option value = "0">No Pain</option>
+      <option value = "1">Severe Pain</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="runnyNose">Runny Nose</label>
+    <select class="form-control custom-select" id="runnyNose" name="runnyNose">
+      <option value = "1">Yes</option>
+      <option value = "0">No</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="diffBreath">Difficulty In Breathing</label>
+    <select class="form-control custom-select" id="diffBreath" name="diffBreath">
+      <option value = "-1">No Difficulty</option>
+      <option value = "0">Minor Difficulty</option>
+      <option value = "1">Severe Difficulty</option>
+    </select>
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}
